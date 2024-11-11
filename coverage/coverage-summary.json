@@ -1,0 +1,86 @@
+{
+  "total": {
+    "lines": {
+      "total": 108,
+      "covered": 67,
+      "skipped": 0,
+      "pct": 62.03
+    },
+    "statements": {
+      "total": 108,
+      "covered": 67,
+      "skipped": 0,
+      "pct": 62.03
+    },
+    "functions": {
+      "total": 5,
+      "covered": 2,
+      "skipped": 0,
+      "pct": 40
+    },
+    "branches": {
+      "total": 11,
+      "covered": 5,
+      "skipped": 0,
+      "pct": 45.45
+    },
+    "branchesTrue": {
+      "total": 0,
+      "covered": 0,
+      "skipped": 0,
+      "pct": "Unknown"
+    }
+  },
+  "D:\\La catho\\Master_1_Cyber_Cours\\DevOps\\tp1_test_unitaire\\index.js": {
+    "lines": {
+      "total": 29,
+      "covered": 0,
+      "skipped": 0,
+      "pct": 0
+    },
+    "functions": {
+      "total": 1,
+      "covered": 0,
+      "skipped": 0,
+      "pct": 0
+    },
+    "statements": {
+      "total": 29,
+      "covered": 0,
+      "skipped": 0,
+      "pct": 0
+    },
+    "branches": {
+      "total": 1,
+      "covered": 0,
+      "skipped": 0,
+      "pct": 0
+    }
+  },
+  "D:\\La catho\\Master_1_Cyber_Cours\\DevOps\\tp1_test_unitaire\\saver.js": {
+    "lines": {
+      "total": 79,
+      "covered": 67,
+      "skipped": 0,
+      "pct": 84.81
+    },
+    "functions": {
+      "total": 4,
+      "covered": 2,
+      "skipped": 0,
+      "pct": 50
+    },
+    "statements": {
+      "total": 79,
+      "covered": 67,
+      "skipped": 0,
+      "pct": 84.81
+    },
+    "branches": {
+      "total": 10,
+      "covered": 5,
+      "skipped": 0,
+      "pct": 50
+    }
+  }
+}

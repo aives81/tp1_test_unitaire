@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import {existsSync, readFileSync, writeFileSync} from 'node:fs'
 
 const teaDataFilename = 'data.json'
 
@@ -13,12 +13,12 @@ const teaDataFilename = 'data.json'
  * @returns {Array<Tea>} All teas
  */
 function listTeas() {
-  if (!existsSync(teaDataFilename)) {
-    return []
-  }
+    if (!existsSync(teaDataFilename)) {
+        return []
+    }
 
-  const fileContent = readFileSync(teaDataFilename, 'utf8')
-  return JSON.parse(fileContent)
+    const fileContent = readFileSync(teaDataFilename, 'utf8')
+    return JSON.parse(fileContent)
 }
 
 /**
@@ -27,7 +27,7 @@ function listTeas() {
  * @returns {Tea|undefined} The tea with the given name
  */
 function getTeaByName(teaName) {
-  return listTeas().find(tea => tea.name === teaName)
+    return listTeas().find(tea => tea.name === teaName)
 }
 
 /**
@@ -35,33 +35,33 @@ function getTeaByName(teaName) {
  * @param {Tea} newTea
  */
 function saveTea(newTea) {
-  const teas = listTeas()
+    const teas = listTeas()
 
-  // Check that name is uniq
-  const teaByName = teas
-          .find(tea => tea.name === newTea.name)
-  if (teaByName && teaByName.id !== newTea.id) {
-    throw new Error(`Tea with name ${newTea.name} already exists`)
-  }
+    // Check that name is uniq
+    const teaByName = teas
+        .find(tea => tea.name === newTea.name)
+    if (teaByName && teaByName.id !== newTea.id) {
+        throw new Error(`Tea with name ${newTea.name} already exists`)
+    }
 
-  // Check that id is uniq
+    // Check that id is uniq
 
-  const teaById = teas
-          .find(tea => tea.id === newTea.id)
+    const teaById = teas
+        .find(tea => tea.id === newTea.id)
 
-  if (teaById && teaById.name !== newTea.name) {
-    throw new Error(`Tea with id ${newTea.id} already exists`)
-  }
+    if (teaById && teaById.name !== newTea.name) {
+        throw new Error(`Tea with id ${newTea.id} already exists`)
+    }
 
-  const newTeas = [
-    ...teas.filter(tea => tea.id !== newTea.id),
-    newTea,
-  ]
+    const newTeas = [
+        ...teas.filter(tea => tea.id !== newTea.id),
+        newTea,
+    ]
 
 
-  const newFileContent = JSON.stringify(newTeas, null, 2)
+    const newFileContent = JSON.stringify(newTeas, null, 2)
 
-  writeFileSync(teaDataFilename, newFileContent)
+    writeFileSync(teaDataFilename, newFileContent)
 }
 
 /**
@@ -69,11 +69,11 @@ function saveTea(newTea) {
  * @returns {number}
  */
 function generateNewTeaId() {
-  return Date.now()
+    return Date.now()
 }
 
 module.exports = {
-  getTeaByName,
-  saveTea,
-  generateNewTeaId,
+    getTeaByName,
+    saveTea,
+    generateNewTeaId,
 }

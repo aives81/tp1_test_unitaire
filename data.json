@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Green Tea",
+    "description": "A healthy tea"
+  },
+  {
+    "id": 2,
+    "name": "Black Tea",
+    "description": "A strong tea"
+  }
+]
